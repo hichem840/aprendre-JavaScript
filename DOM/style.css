@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  font-family: serif;
+  list-style: none;
+}
+body {
+  text-align: center;
+  margin: 0;
+  color: white;
+  min-height: 200vh;
+}
+
+.box {
+  border: 6px solid white;
+  transition: 0.25s ease;
+  background: black;
+  padding: 10px;
+}
+
+p {
+  visibility: hidden;
+  width: 240px;
+  margin: 10px auto 0;
+  opacity: 0;
+  transition: 0.6s;
+  transform: translateX(-200px);
+  transition: 3s ease;
+}
+
+.question-clicked {
+  background: rgb(47, 47, 47);
+  border-radius: 30px;
+  border: 6px dashed pink;
+}
+
+.show-repance {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.mousemove {
+  height: 50px;
+  width: 50px;
+  border: 2px solid pink;
+  position: absolute;
+  border-radius: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+nav {
+  background: rgba(64, 34, 238, 0.897);
+  height: 50px;
+  width: 100%;
+  position: fixed;
+}
+
+nav ::after {
+  content: "";
+  height: 150px;
+  width: 100px;
+  background: radial-gradient(
+    circle closest-side,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  position: absolute;
+  opacity: 0;
+}
+nav r[hover] ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+}
+form {
+  background: black;
+  height: 400px;
+}
