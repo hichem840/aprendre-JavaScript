@@ -93,7 +93,6 @@ window.addEventListener("scroll", () => {
     nav.style.top = "-50px";
   }
 });
-
 //--------------------------
 //form event 
 const inputName = document.querySelector('input[type="text"]');
@@ -119,7 +118,7 @@ form.addEventListener("submit", (e) => {
       <h4>Langage préféré :${language}</h4>
     `;
   } else {
-    alert("Veuillez accepter les CGV");
+    alert("Veuillez accepter les CGV"); 
   }
 });
 // Load event
