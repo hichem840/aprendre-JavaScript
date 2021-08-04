@@ -169,22 +169,21 @@ let numberString = "42.12 est un chiffre";
 //  console.log(newArray.slice(3, 5));
 
 // console.log(array3.indexOf("Python"));
-
-// array3.forEach((languages) => console.log(languages));
+ // array3.forEach((languages) => console.log(languages));
 
 //  console.log(array3.every((language) => language == "Php"));
 //  console.log(array3.some((language) => language == "Php"));
 
 //  let shift = array3.shift();
-// //  console.log(array3);
+//  console.log(array3);
 
 //  console.log(array3.pop());
 //  console.log(array3)
-const restArray = array3.splice(1, 2, ...array4);
- console.log(array3);
+// const restArray = array3.splice(1, 2, ...array4);
+//  console.log(array3);
 
 // IMPORTANT //
-// let arrayNumber = [4, 74, 28, 12, 1];
+ let arrayNumber = [4, 74, 28, 12, 1];
 // console.log(arrayNumber.reduce((x, y) => x + y));
 // arrayNumber.push(17);
 // console.log(arrayNumber);
@@ -192,8 +191,26 @@ const restArray = array3.splice(1, 2, ...array4);
 // FILTER, SORT, MAP
 // console.log(arrayNumber.filter((number) => number > 10));
 // console.log(arrayNumber.sort());
-// console.log(arrayNumber.sort((a, b) => a - b));
+// console .log(arrayNumber.sort((a, b) => a - b));
 
-// document.body.innerHTML = arrayNumber
+//  document.body.innerHTML += arrayNumber
 //   .map((number) => `<li>${number}</li>`)
 //   .join("");
+
+
+ //-----------------
+// Méthodes Objects
+//-----------------
+document.body.innerHTML = data
+  .filter((user) => user.pseudo.includes("h"))
+  .sort((a, b) => b.age - a.age)
+ .map(  (user) =>
+ `     <div class="user-card">
+      <h2>${user.pseudo}</h2>
+      <p>Age : ${user.age} ans</p>
+      <p>Status : ${user.admin ? "Modérateur" : "Membre"}</p>
+     </div>
+ `
+  )  .join("");
+
+//----------
