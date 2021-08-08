@@ -201,16 +201,46 @@ let numberString = "42.12 est un chiffre";
  //-----------------
 // Méthodes Objects
 //-----------------
-document.body.innerHTML = data
-  .filter((user) => user.pseudo.includes("h"))
-  .sort((a, b) => b.age - a.age)
- .map(  (user) =>
- `     <div class="user-card">
-      <h2>${user.pseudo}</h2>
-      <p>Age : ${user.age} ans</p>
-      <p>Status : ${user.admin ? "Modérateur" : "Membre"}</p>
-     </div>
- `
-  )  .join("");
+// document.body.innerHTML = data
+//   .filter((user) => user.pseudo.includes("h"))
+//   .sort((a, b) => b.age - a.age)
+//  .map(  (user) =>
+//  `     <div class="user-card">
+//       <h2>${user.pseudo}</h2>
+//       <p>Age : ${user.age} ans</p>
+//       <p>Status : ${user.admin ? "Modérateur" : "Membre"}</p>
+//      </div>
+//  `
+//   )  .join("");
 
 //----------
+//les dates 
+
+// Date classique
+//  let date = new Date();
+
+// Timestamp
+// let timestamp = Date.parse(date);
+// console.log(timestamp);
+
+// IsoString
+// let iso = date.toISOString();
+
+function dateparser(chaine) {
+  let newDate = new Date(chaine).toLocaleDateString("fr-FR",{
+    year :"numeric",
+    month :"numeric",
+    day:"numeric",
+    hour : "numeric",
+    minute:"numeric",
+  });
+  return newDate;
+};
+//  console.log(dateparser(date));
+
+//destructuring 
+const dateDestructuring = (chaine) =>{
+  let newDate = chaine.split("T")[0];
+  let [y,m,d]= newDate.split("-");
+  return [d,m,y].join("/");} 
+  
