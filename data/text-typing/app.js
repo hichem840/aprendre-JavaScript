@@ -11,7 +11,7 @@ const createLetter = () => {
 
   setTimeout(() => {
     letter.remove();
-  }, 2800);
+  },2800);
 };
 
 const loop = () => {
@@ -33,4 +33,5 @@ const loop = () => {
     }
   }, 60);
 };
+
 loop();
