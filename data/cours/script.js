@@ -243,4 +243,21 @@ const dateDestructuring = (chaine) =>{
   let newDate = chaine.split("T")[0];
   let [y,m,d]= newDate.split("-");
   return [d,m,y].join("/");} 
-  
+  let mail = "from_s$cratch33@gmail.com";
+// console.log(mail.search(/frscceeceom/));
+
+// console.log(mail.replace(/from/, "de"));
+// console.log(mail.match(/SCratch/i));
+// console.log(mail.match(/[zug]/));
+// console.log(mail.match(/[12]/));
+
+// Tous les chiffres
+// console.log(mail.match(/\d/));
+
+// Matcher toutes les lettres
+// console.log(mail.match(/[a-z]/));
+
+// console.log(mail.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i));
+
+let separator = 265264849;
+// console.log(separator.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
