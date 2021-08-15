@@ -9,19 +9,28 @@ async function get(){
   let data = await response.json();
   console.log(data);
   
-document.body.innerHTML=
+document.body.innerHTML+=
 `<select>
   ${data.map((actor) =>` <option> ${actor.name} </option>`)}     
-</select> 
+</select>
 `;
 const select = document.querySelector("select");
 select.addEventListener("input", (e) => {
-   console.log(e.target.value);
-  
-   document.querySelector("#action >h1").innerHTML="name"
+   console.log(document.querySelector("#action>h1"))
+
+ var i=0;;
+  while (i<63){
+      if (data[i].name===e.target.value) {
+        document.querySelector("#action > h1").innerHTML+=e.target.value
+        document.querySelector("#action >img").src=data[i].img
+      document.querySelector("#action >h3").innerHTML+=data[i].birthday
+      }
+      i++;
+  }
   });
+
  
-//  document.querySelector("#action >img").src=data[0].img
-//  document.querySelector("#action >h3").innerHTML=data[0].birthday
-}
+
+
+};
 get()
